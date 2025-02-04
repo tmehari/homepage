@@ -1,55 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Homepage</title>
+    <title>Temesgen Mehari - Homepage</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 </head>
+
 <body>
     <header>
-        <h1>Temesgen Mehari</h1>
-        <nav>
-            <ul>
-                <li><a href="#bio">Bio</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <!-- <li><a href="#blog">Blog</a></li> -->
-                <li><a href="#cv">CV</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="header-content">
+            <div class="header-text">
+                <div class="centered-name">
+                    <h1>Temesgen Mehari</h1>
+                </div>
+                <div class="image-container">
+                    <img src="assets/images/profile.png" alt="Temesgen Mehari" class="profile-image">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#bio">Bio</a></li>
+                        <li><a href="#research">Research</a></li>
+                        <!-- <li><a href="#blog">Blog</a></li> -->
+                        <li><a href="assets/cv.pdf" download title="Download CV">CV</a></li>
+                        
+                    </ul>
+                </nav>
+                <div class="social-links">
+                    <a href="https://scholar.google.de/citations?user=DkBBUAUAAAAJ&hl=de" target="_blank" title="Google Scholar" style="color: #f5f5f5; text-decoration: none; font-size: 24px;">
+                        <i class="ai ai-google-scholar"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/tmehari/" target="_blank" title="LinkedIn" style="color: #f5f5f5; text-decoration: none; font-size: 24px;">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/tmehari" target="_blank" title="GitHub" style="color: #f5f5f5; text-decoration: none; font-size: 24px;">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:mehari@hey.com" title="Email" style="color: #f5f5f5; text-decoration: none; font-size: 24px;">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </header>
 
     <section id="bio">
         <h2>Bio</h2>
-        <p>ToDo: Write short introduction</p>
+        <p>I am a Machine Learning Researcher with a PhD in AI for Medicine, specializing in deep learning for ECG
+            analysis. My
+            work focuses on explainable AI, robustness, and performance metrics in biomedical signal processing. I am
+            passionate
+            about interdisciplinary research at the intersection of AI and healthcare, bridging theoretical advancements
+            with
+            real-world applications.</p>
     </section>
 
     <section id="research">
         <h2>Research</h2>
-        <p>ToDo: Write about papers, maybe short descriptios with images</p>
-    </section>
+        <div class="paper">
+            <img src="./assets/images/self_supervised_learning.png" alt="Self Supervised Learning Visualization"
+                class="paper-image">
+            <div class="paper-content">
+                <h3><a href="https://www.sciencedirect.com/science/article/pii/S0010482521009082"
+                        target="_blank">Self-supervised representation learning from 12-lead ECG data</a></h3>
+                <p class="authors">
+                    <strong>Temesgen Mehari</strong>, Nils Strodthoff
+                </p>
+                <p class="journal">Computers in biology and medicine 141, 105114</p>
+                <p class="summary">In this work, we explore self-supervised learning (SSL) for ECG analysis to learn
+                    meaningful representations without requiring labeled data. By pretraining on large-scale ECG
+                    datasets, our approach surpasses convolutional architectures in both supervised and self-supervised
+                    settings, achieving state-of-the-art performance. We demonstrate that SSL can enhance
+                    generalization, robustness, and data efficiency in ECG classification tasks, paving the way for more
+                    scalable and interpretable AI in cardiology.</p>
+                <a href="https://www.sciencedirect.com/science/article/pii/S0010482521009082/pdfft?md5=934cae70f4aeece24e1541eb3305b82c&pid=1-s2.0-S0010482521009082-main.pdf"
+                    target="_blank" class="download-link">
+                    <i class="fas fa-download"></i>
+                </a>
+            </div>
+        </div>
 
-    <section id="publications">
-        <h2>List of Publications</h2>
-        <p>ToDo: List papers here</p>
-    </section>
-    <!-- 
-    <section id="blog">
-        <h2>Blog</h2>
-        <p>Blog</p>
-    </section>
-    -->
+        <div class="paper">
+            <img src="./assets/images/ptbxlplus.png" alt="PTB-XL+ Visualization" class="paper-image">
+            <div class="paper-content">
+                <h3><a href="https://www.nature.com/articles/s41597-023-02153-8" target="_blank">PTB-XL+, a
+                        comprehensive electrocardiographic feature dataset</a></h3>
+                <p class="authors">
+                    Nils Strodthoff, <strong>Temesgen Mehari</strong>, Claudia Nagel, Philip J Aston, Ashish Sundar, Claus
+                    Graff, Jørgen K Kanters, Wilhelm
+                    Haverkamp, Olaf Dössel, Axel Loewe, Markus Bär, Tobias Schaeffter
+                </p>
+                <p class="journal">Scientific data 10 (1), 279</p>
+                <p class="summary">The PTB-XL+ dataset extends the PTB-XL ECG dataset, providing a comprehensive set of
+                    precomputed features derived from
+                    12-lead electrocardiograms (ECGs). This dataset includes morphological, spectral, and deep
+                    learning-based
+                    representations, facilitating research in explainable AI, model robustness, and ECG classification.
+                    By offering
+                    structured and interpretable feature sets, PTB-XL+ supports both traditional machine learning and
+                    deep learning
+                    approaches for cardiac signal analysis.
+                </p>
+                <a href="https://www.nature.com/articles/s41597-023-02153-8.pdf" target="_blank" class="download-link">
+                    <i class="fas fa-download"></i>
+                </a>
+            </div>
+        </div>
 
-    <section id="cv">
-        <h2>CV</h2>
-        <p><a href="assets/cv.pdf" download>Download my CV</a></p>
-    </section>
+        <div class="paper">
+            <img src="./assets/images/xai.png" alt="XAI4ECG Visualization" class="paper-image">
+            <div class="paper-content">
+                <h3><a href="https://www.sciencedirect.com/science/article/pii/S0010482524006097" target="_blank">
+                        Explaining deep learning for ecg analysis: Building blocks for auditing and knowledge discovery
+                    </a></h3>
+                <p class="authors">
+                    Patrick Wagner, <strong>Temesgen Mehari</strong>, Wilhelm Haverkamp, Nils Strodthoff
+                </p>
+                <p class="journal">Computers in Biology and Medicine 176, 108525</p>
+                <p class="summary">This work explores methods to interpret and audit deep learning models for
+                    electrocardiogram (ECG) analysis. The study introduces
+                    a structured framework that integrates concept-based AI, segmentation-based approaches, and
+                    discovery-driven methods to
+                    enhance model explainability:</p>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: mehari@hey.com</p>
+                <ul>
+                    <li>Concept-based AI enables models to be analyzed in terms of clinically meaningful features,
+                        bridging the gap between deep
+                        learning representations and human medical reasoning.</li>
+                    <li>Segmentation-based approaches help assess how models focus on different ECG waveform components,
+                        ensuring that
+                        predictions align with medical expertise.</li>
+                    <li>Discovery-driven methods allow the identification of previously unknown but relevant patterns,
+                        supporting knowledge
+                        discovery in cardiology.</li>
+                </ul>
+
+                <p class="summary">By combining these approaches, the paper provides tools for auditing model decisions,
+                    detecting biases, and improving
+                    the transparency of AI systems in healthcare.</p>
+                <a href="https://www.sciencedirect.com/science/article/pii/S0010482524006097/pdfft?md5=eca25033dc4669d01aa851a19ea01ccd&pid=1-s2.0-S0010482524006097-main.pdf"
+                    target="_blank" class="download-link">
+                    <i class="fas fa-download"></i>
+                </a>
+            </div>
+        </div>
+        <div class="paper">
+            <img src="./assets/images/s4.png" alt="S4 Visualization" class="paper-image">
+            <div class="paper-content">
+                <h3><a href="https://ieeexplore.ieee.org/abstract/document/10237242" target="_blank">
+                        Towards quantitative precision for ECG analysis: Leveraging state space models, self-supervision
+                        and patient metadata </a></h3>
+                <p class="authors">
+                    <strong>Temesgen Mehari</strong>, Nils Strodthoff
+                </p>
+                <p class="journal">IEEE Journal of Biomedical and Health Informatics</p>
+                <p class="summary">In this work, we introduce a novel framework that integrates structured state space
+                    models (SSMs), self-supervised
+                    learning, and patient metadata to advance the precision of ECG-based predictions.
+
+                    Our approach challenges conventional convolutional architectures by leveraging SSMs, which are
+                    inherently suited for
+                    capturing long-range dependencies in physiological signals. We further enhance model performance
+                    through self-supervised
+                    pretraining, enabling more data-efficient and generalizable feature extraction. Additionally, we
+                    incorporate
+                    patient-specific metadata to refine predictions, reducing biases and improving clinical relevance.
+
+                </p>
+                <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10237242" target="_blank"
+                    class="download-link">
+                    <i class="fas fa-download"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="paper">
+            <img src="./assets/images/feature_importance.png" alt="Feature Importance Visualization" class="paper-image">
+            <div class="paper-content">
+                <h3><a href="https://ieeexplore.ieee.org/abstract/document/10400809" target="_blank">
+                        Ecg feature importance rankings: Cardiologists vs. algorithms  </a></h3>
+                <p class="authors">
+                <strong>Temesgen Mehari</strong>, Ashish Sundar, Alen Bosnjakovic, Peter Harris, Steven E Williams, Axel Loewe, Olaf Doessel, Claudia
+                Nagel, Nils Strodthoff, Philip J Aston
+                </p>
+                <p class="journal">IEEE Journal of Biomedical and Health Informatics</p>
+                <p class="summary">Interpretable AI is crucial for deploying deep learning models in clinical settings, yet discrepancies often arise
+                between algorithmic and human reasoning. In this study, we systematically compare feature importance rankings derived
+                from state-of-the-art machine learning models with those provided by expert cardiologists for ECG classification tasks.
+                
+                Our analysis reveals that while algorithms excel at detecting complex patterns, they sometimes emphasize features that
+                lack clinical significance. Conversely, cardiologists prioritize features grounded in physiological understanding, which
+                may not always align with data-driven importance rankings. By bridging this gap, we highlight the strengths and
+                limitations of both approaches and propose strategies for improving AI-assisted ECG diagnostics.
+                
+                This work underscores the need for human-AI collaboration in medical decision-making, ensuring that model predictions
+                align with expert knowledge to enhance trust and clinical utility.
+                
+                </p>
+                <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10400809"
+                    target="_blank" class="download-link">
+                    <i class="fas fa-download"></i>
+                </a>
+            </div>
+        </div>
+
+
     </section>
 
     <footer>
@@ -58,5 +217,5 @@
 
     <script src="script.js"></script>
 </body>
-</html>
 
+</html>

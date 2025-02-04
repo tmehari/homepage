@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Computer Modern Serif", serif;
     margin: 0;
     padding: 0;
     background-color: #f8f9fa;
@@ -49,5 +49,123 @@ footer {
     background: #333;
     color: white;
     margin-top: 40px;
+}
+
+.paper h3 {
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+}
+
+.paper .authors {
+    color: #666;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+}
+
+.paper .journal {
+    color: #444;
+    font-weight: 500;
+    font-style: italic;
+    margin: 0 0 1rem 0;
+    padding: 0;
+    line-height: 1.2;
+}
+
+.paper {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.paper-content {
+    flex: 2;
+    position: relative;
+}
+
+.paper-image {
+    width: 300px;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: none;
+    flex: 1;
+}
+
+.paper h3 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.paper h3 a:hover {
+    text-decoration: underline;
+}
+
+.download-link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #666;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.download-link:hover {
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-family: "Computer Modern Serif", serif;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header-text {
+    text-align: center;
+    width: 100%;
+}
+
+.centered-name {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.image-container {
+    position: absolute;
+    right: 19vw;
+    top: 0vw;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .image-container {
+        position: static;
+        margin: 1rem auto;
+    }
+    
+    .header-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
