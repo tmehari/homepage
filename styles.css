@@ -30,7 +30,7 @@ nav ul li a {
 }
 
 section {
-    max-width: 70%;
+    max-width: 60%;
     margin: 40px auto;
     padding: 20px;
     background: #f8f9fa;
@@ -164,11 +164,14 @@ h1, h2, h3 {
 
 .header-content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    position: relative;
+    padding: 0 20px;
+    gap: 0px;
 }
 
 .header-text {
@@ -183,16 +186,16 @@ h1, h2, h3 {
 }
 
 .image-container {
-    position: absolute;
-    right: 19vw;
-    top: 0vw;
+    width: 20%;
+    max-width: 150px;
 }
 
 .profile-image {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    height: auto;
     border-radius: 50%;
     object-fit: cover;
+    aspect-ratio: 1;
 }
 
 /* Header profile image */
@@ -205,8 +208,25 @@ h1, h2, h3 {
 
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
-    .header-profile {
-        max-width: 25vw;
+    section, .paper {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .paper-image-container {
+        width: 90%;
+        max-width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .paper-image {
+        width: 100%;
+        max-width: 100%;
+        max-height: 50vh;
+        object-fit: contain;
     }
 
     .paper h3 {
@@ -230,9 +250,30 @@ h1, h2, h3 {
         font-size: 0.9rem;
     }
 
-    section, .paper {
+    .header-content {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .header-text {
         width: 100%;
-        max-width: 100%;
+    }
+
+    .header-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .image-container {
+        width: 30%;
+        max-width: 120px;
+    }
+
+    nav ul li {
+        font-size: 0.9rem;
+    }
+
+    .social-links a {
+        font-size: 20px !important;
     }
 }
 
@@ -257,6 +298,18 @@ h1, h2, h3 {
 
     .paper ul li {
         font-size: 0.85rem;
+    }
+
+    .header-text h1 {
+        font-size: 1.2rem;
+    }
+
+    nav ul li {
+        font-size: 0.8rem;
+    }
+
+    .social-links a {
+        font-size: 18px !important;
     }
 }
 
