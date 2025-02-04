@@ -5,6 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temesgen Mehari - Homepage</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        
+        header {
+            width: 100vw; /* Full viewport width */
+            box-sizing: border-box; /* Include padding in width calculation */
+            margin: 0;
+            padding-right: calc(100vw - 100%); /* Compensate for scrollbar */
+        }
+    </style>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -26,7 +40,7 @@
                         <li><a href="#bio">Bio</a></li>
                         <li><a href="#research">Research</a></li>
                         <!-- <li><a href="#blog">Blog</a></li> -->
-                        <li><a href="assets/files/cv.pdf" target="_blank">CV</a></li>
+                        <li><a onclick="window.open('./assets/files/cv.pdf', '_blank')" style="cursor: pointer;">CV</a></li>
                         
                     </ul>
                 </nav>
