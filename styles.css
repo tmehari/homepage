@@ -30,11 +30,18 @@ nav ul li a {
 }
 
 section {
-    max-width: 60%;
+    max-width: 100%;
     margin: 40px auto;
     padding: 20px;
     background: #f8f9fa;
     border-radius: 8px;
+}
+
+/* Add desktop/laptop specific styles */
+@media screen and (min-width: 769px) {
+    section {
+        max-width: 60%; /* or whatever percentage you prefer for desktop */
+    }
 }
 
 h2 {
@@ -208,8 +215,9 @@ h1, h2, h3 {
 
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
-    section, .paper {
-        width: 100%;
+    section {
+        margin: 20px auto;
+        padding: 10px;
         max-width: 100%;
     }
 
@@ -275,6 +283,26 @@ h1, h2, h3 {
     .social-links a {
         font-size: 20px !important;
     }
+
+    .content-wrapper {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .paper {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .paper-image {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .paper-content {
+        width: 100%;
+    }
 }
 
 /* Even smaller screens */
@@ -311,5 +339,11 @@ h1, h2, h3 {
     .social-links a {
         font-size: 18px !important;
     }
+}
+
+.content-wrapper {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
