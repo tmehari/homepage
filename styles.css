@@ -382,18 +382,45 @@ h1, h2, h3 {
 }
 
 .social-link {
-    color: #f5f5f5;
+    color: #f5f5f5 !important;  /* Erzwingt die Farbe auch in Safari */
     text-decoration: none;
     font-size: 24px;
+    -webkit-text-fill-color: #f5f5f5;  /* Safari-spezifische Farbanpassung */
+}
+
+.social-link:hover {
+    color: #f5f5f5 !important;
+    -webkit-text-fill-color: #f5f5f5;
 }
 
 .profile-image-container {
     width: 12vw;
-    max-width: 40px;
+    max-width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    -webkit-box-sizing: border-box;  /* Safari-spezifisch */
+    box-sizing: border-box;
+}
+
+.profile-image {
+    width: auto;
+    height: auto;
+    min-width: 200px;  /* Reduziert von 400px */
+    max-width: 400px;
+    border-radius: 9999px;
+    object-fit: contain;
+    aspect-ratio: auto;
+    loading: lazy;
+    -webkit-appearance: none;  /* Safari-spezifisch */
+}
+
+/* Safari-spezifische Anpassungen */
+@supports (-webkit-touch-callout: none) {
+    .profile-image {
+        max-width: 300px;  /* Zusätzliche Größenbegrenzung für Safari */
+    }
 }
 
 @media (min-width: 768px) {
@@ -401,16 +428,5 @@ h1, h2, h3 {
         width: 16vw;
         max-width: 50px;
     }
-}
-
-.profile-image {
-    width: auto;
-    height: auto;
-    min-width: 200px;
-    max-width: 400px;
-    border-radius: 9999px;
-    object-fit: contain;
-    aspect-ratio: auto;
-    loading: lazy;
 }
 
