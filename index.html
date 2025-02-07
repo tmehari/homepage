@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Temesgen Mehari - Machine Learning Researcher specializing in AI for Medicine and ECG analysis">
     <title>Temesgen Mehari - Homepage</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <style>
         body {
             margin: 0;
@@ -13,10 +16,13 @@
         }
         
         header {
-            width: 100vw; /* Full viewport width */
+            width: 100%;
             box-sizing: border-box; /* Include padding in width calculation */
             margin: 0;
-            padding-right: calc(100vw - 100%); /* Compensate for scrollbar */
+        }
+
+        .lazy-load {
+            loading: lazy;
         }
     </style>
     <link rel="stylesheet" href="styles.css">
@@ -25,13 +31,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 </head>
 
-<body>
-    <header>
-        <div class="header-content">
-            <div class="image-container">
-                <img src="assets/images/profile.png" alt="Temesgen Mehari" class="profile-image">
+<body class="font-serif m-0 p-0 bg-gray-50 text-gray-700 overflow-x-hidden">
+    <header class="bg-gray-800 text-white p-5 text-center">
+        <div class="flex flex-col justify-center items-center w-full max-w-7xl mx-auto px-5 gap-0">
+            <div class="profile-image-container">
+                <img class="profile-image" 
+                     src="assets/images/profile.png" 
+                     alt="Temesgen Mehari" 
+                     width="80" 
+                     height="80">
             </div>
-            <div class="header-text">
+            <div class="text-center w-full">
                 <div class="centered-name">
                     <h1>Temesgen Mehari</h1>
                 </div>
@@ -41,20 +51,19 @@
                         <li><a href="#research">Research</a></li>
                         <!-- <li><a href="#blog">Blog</a></li> -->
                         <li><a onclick="window.open('./assets/files/cv.pdf', '_blank')" style="cursor: pointer;">CV</a></li>
-                        
                     </ul>
                 </nav>
                 <div class="social-links">
-                    <a href="https://scholar.google.de/citations?user=DkBBUAUAAAAJ&hl=de" target="_blank" title="Google Scholar" style="color: #f5f5f5; text-decoration: none; font-size: 24px;">
+                    <a href="https://scholar.google.de/citations?user=DkBBUAUAAAAJ&hl=de" target="_blank" title="Google Scholar" class="social-link">
                         <i class="ai ai-google-scholar"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/tmehari/" target="_blank" title="LinkedIn" style="color: #f5f5f5; text-decoration: none; font-size: 24px;">
+                    <a href="https://www.linkedin.com/in/tmehari/" target="_blank" title="LinkedIn" class="social-link">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://github.com/tmehari" target="_blank" title="GitHub" style="color: #f5f5f5; text-decoration: none; font-size: 24px;">
+                    <a href="https://github.com/tmehari" target="_blank" title="GitHub" class="social-link">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="mailto:mehari@hey.com" title="Email" style="color: #f5f5f5; text-decoration: none; font-size: 24px;">
+                    <a href="mailto:mehari@hey.com" title="Email" class="social-link">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
@@ -80,7 +89,10 @@
             <h2>Research</h2>
             <div class="paper">
                 <div class="paper-image-container">
-                    <img src="./assets/images/self_supervised_learning.png" alt="Self Supervised Learning Visualization" class="paper-image">
+                    <img src="./assets/images/self_supervised_learning.png" 
+                         alt="Self Supervised Learning Visualization" 
+                         class="paper-image lazy-load"
+                         loading="lazy">
                 </div>
                 <div class="paper-content">
                     <div class="paper-text">
@@ -107,7 +119,7 @@
             <div class="paper">
                 <img src="./assets/images/ptbxlplus.png" alt="PTB-XL+ Visualization" class="paper-image">
                 <div class="paper-content">
-                    <h3><a href="https://www.nature.com/articles/s41597-023-02153-8" target="_blank">PTB-XL+, a
+                        <h3><a href="https://www.nature.com/articles/s41597-023-02153-8" target="_blank">PTB-XL+, a
                             comprehensive electrocardiographic feature dataset</a></h3>
                     <p class="authors">
                         Nils Strodthoff, <strong>Temesgen Mehari</strong>, Claudia Nagel, Philip J Aston, Ashish Sundar, Claus
